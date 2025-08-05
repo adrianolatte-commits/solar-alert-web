@@ -1,7 +1,7 @@
 async function loginIsolar() {
   const res = await fetch('https://gateway.isolarcloud.com.hk/openapi/v1/auth/login', {
     method: 'POST', headers: {'Content-Type':'application/json'},
-    body: JSON.stringify({ userName: adrianolatte@gmail.com, password: Herpes2013!, loginType:'1' })
+    body: JSON.stringify({ userName: 'adrianolatte@gmail.com', password: 'Herpes2013!', loginType:'1' })
   });
   const j = await res.json();
   return j.data.token;
@@ -9,7 +9,7 @@ async function loginIsolar() {
 async function loginAurora() {
   const res = await fetch('https://api.auroravision.net/api/v1/auth/login', {
     method:'POST', headers:{'Content-Type':'application/json'},
-    body: JSON.stringify({ username: adrianolatte@gmail.com, password: Herpes2013! })
+    body: JSON.stringify({ username: 'adrianolatte@gmail.com', password: 'Herpes2013!' })
   });
   const j = await res.json();
   return j.data.token;
