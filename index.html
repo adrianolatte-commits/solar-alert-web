@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Solar Alert</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 1rem; }
+    .card { border: 1px solid #ccc; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; }
+    .status { font-size: 0.9rem; color: #555; }
+    .button { background: #28a745; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; font-size: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Solar Alert</h1>
+  <button class="button" id="refresh">🔄 Controlla ora</button>
+  <div id="dashboard">
+    <div class="card" id="fv-anfore">
+      <h2>FV Anfore</h2>
+      <div>Potenza: <span id="anfore-power">--</span> W</div>
+      <div>Energia oggi: <span id="anfore-energy">--</span> kWh</div>
+      <div class="status" id="anfore-status">Stato: --</div>
+    </div>
+    <div class="card" id="fv-domus">
+      <h2>FV Domus</h2>
+      <div>Potenza: <span id="domus-power">--</span> W</div>
+      <div>Energia oggi: <span id="domus-energy">--</span> kWh</div>
+      <div class="status" id="domus-status">Stato: --</div>
+    </div>
+    <div class="card" id="acs-anfore">
+      <h2>ACS Anfore</h2>
+      <div>Temperatura: <span id="anfore-temp">--</span> °C</div>
+      <div class="status" id="anfore-acs-status">Stato: --</div>
+    </div>
+    <div class="card" id="acs-domus">
+      <h2>ACS Domus</h2>
+      <div>Temperatura: <span id="domus-temp">--</span> °C</div>
+      <div class="status" id="domus-acs-status">Stato: --</div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
